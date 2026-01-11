@@ -5,30 +5,36 @@ const Home: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full">
+      <section className="relative w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div 
-            className="w-full h-full bg-cover bg-center" 
+          <div
+            className="w-full h-full bg-cover bg-center opacity-80"
             style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbsB4OEY-eGXrLq2hDMUqWc4U_muTUBE4W49AimJxgFdXWCAAzwz-jVon4JD1XKDs5pR47jJx9jaxQy1kmDvZ2DmA2c_22u_XDgNeNSzzWzWLpXrGwwmH_TfQyDLa-Pb0MAqViERrdp-xaNYGIEIYArr9woJsbQ0FIxImjCszXI0uAPi1D4Z2NMtngD0SYC1ErkrI0g6lDKV7Ve_awQna4KquFenIUGvph-TYX3O__bXD1iO4ifJ24IgnGFumvWDvphoRmaMpPyFs")' }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/40 dark:from-dark/95 dark:to-dark/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/70 to-secondary/30 dark:from-dark/95 dark:to-dark/60"></div>
         </div>
+
+        {/* Lotus Flower Decoration */}
+        <div className="absolute right-[-10%] bottom-[-10%] md:right-0 md:bottom-0 w-[300px] md:w-[500px] opacity-80 pointer-events-none z-0 transform rotate-[-15deg]">
+          <img src="/assets/lotus-flower.png" alt="Watercolor Lotus Flower" className="w-full h-auto" />
+        </div>
+
         <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-10 py-24 md:py-32 lg:py-40">
-          <div className="max-w-[640px] flex flex-col gap-6">
-            <span className="inline-block px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/40 text-primary text-xs font-bold tracking-wide w-fit border border-blue-200 dark:border-blue-800">
+          <div className="max-w-[700px] flex flex-col gap-6">
+            <span className="inline-block px-3 py-1 rounded-full bg-white/50 backdrop-blur-sm dark:bg-blue-900/40 text-primary text-xs font-bold tracking-wide w-fit border border-primary/20 dark:border-blue-800">
               POSTPARTUM CARE SPECIALIST
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white">
-              Nurturing Support for Your Fourth Trimester
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-playfair font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white drop-shadow-sm">
+              Nurturing Support for Your <span className="text-primary italic">Fourth Trimester</span>
             </h1>
-            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-normal max-w-lg bg-white/30 dark:bg-transparent backdrop-blur-sm p-2 rounded-lg">
               Compassionate postpartum care designed to help you rest, recover, and bond with your new baby. You don't have to do it alone.
             </p>
-            <div className="flex flex-wrap gap-4 pt-2">
-              <Link to="/services" className="h-12 px-6 flex items-center justify-center rounded-full bg-primary text-white font-bold text-base shadow-lg shadow-blue-200/50 dark:shadow-none hover:bg-primary-hover transition-all transform hover:-translate-y-0.5">
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Link to="/services" className="h-14 px-8 flex items-center justify-center rounded-full bg-primary text-white font-bold text-lg shadow-xl shadow-primary/30 dark:shadow-none hover:bg-primary-hover hover:scale-105 transition-all duration-300">
                 View Services
               </Link>
-              <Link to="/contact" className="h-12 px-6 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold text-base hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+              <Link to="/contact" className="h-14 px-8 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-md dark:bg-slate-800 border border-white/50 dark:border-slate-700 text-slate-900 dark:text-white font-bold text-lg hover:bg-white dark:hover:bg-slate-700 hover:shadow-lg transition-all duration-300">
                 Let's Chat
               </Link>
             </div>
@@ -56,16 +62,16 @@ const Home: React.FC = () => {
         <div className="max-w-[1100px] mx-auto px-4 sm:px-10">
           <div className="bg-white dark:bg-dark-surface rounded-2xl p-6 md:p-12 shadow-xl shadow-slate-200/50 dark:shadow-none flex flex-col md:flex-row gap-10 items-center">
             <div className="w-full md:w-1/2 aspect-[4/5] md:aspect-square relative rounded-xl overflow-hidden shrink-0 group">
-              <div 
-                className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" 
+              <div
+                className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxmMWk97OFtxNGw0bssT-2EMih9NHJjOzyAGYYoLFZFEb7hAGsiiBJuAIbx21S7shwDSZFEt8BMXbmeNRsEAimvtyJJ5W0Wjb80OVc_4TioD-Zwr9mJeL0x_avAHOeFrLtAfW3Dg0ujW6GzR5JELc6tlXIpDhNwLQxYdXaoxu5a8b6rABMHH0BV0g07xE5cLPMGRSzpg-XYhZPKMjM5xQBQsek5M9e_XfLJvaUzbU8BmELwAfUv2ASKvJ8pHYa-JrPs2yiU_ugAgc")' }}
               ></div>
             </div>
             <div className="flex flex-col gap-6 w-full md:w-1/2">
               <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Hi, I'm Tina</h2>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
-                I am a certified postpartum doula dedicated to helping families transition into parenthood with confidence and calm. 
-                <br/><br/>
+                I am a certified postpartum doula dedicated to helping families transition into parenthood with confidence and calm.
+                <br /><br />
                 My approach is evidence-based, empathetic, and entirely non-judgmental. Whether you need sleep support, feeding guidance, or simply a chance to shower, I'm here to nurture the nurturer.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -153,7 +159,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-             <div className="bg-white dark:bg-dark-surface p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col justify-between">
+            <div className="bg-white dark:bg-dark-surface p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col justify-between">
               <div>
                 <div className="flex text-yellow-400 mb-4 text-sm">
                   {[...Array(5)].map((_, i) => <span key={i} className="material-symbols-outlined fill-current">star</span>)}
@@ -168,7 +174,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-             <div className="bg-white dark:bg-dark-surface p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col justify-between">
+            <div className="bg-white dark:bg-dark-surface p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col justify-between">
               <div>
                 <div className="flex text-yellow-400 mb-4 text-sm">
                   {[...Array(5)].map((_, i) => <span key={i} className="material-symbols-outlined fill-current">star</span>)}
